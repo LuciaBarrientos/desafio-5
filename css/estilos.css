@@ -1,0 +1,733 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    list-style-type: none;
+    
+}
+
+/* grid estructura index*/
+
+.grid {
+    display: grid;
+    grid-template-areas: "header"
+                         "contenedorFraseDiseno"
+                         "cardsHome"
+                         "previewNosotros"
+                         "footer";
+}
+
+
+/* eliminar sub de links */
+a{
+    text-decoration: none;
+}
+
+/* nav */
+
+nav {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+}
+
+nav ul {
+    display:flex;
+    margin:20px;
+}
+
+nav ul li {
+    margin: 20px;
+}
+
+nav ul li a {
+    color:#818181;
+}
+
+.logoHeader {
+    width: 50%;
+    margin: 30px;
+}
+
+/* header */
+
+header{
+    grid-area: header;
+    text-align: center;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+h1{
+    margin-top: 50px;
+    color: #00bebb;
+    font-size: 55px;
+}
+
+header h2{
+    color: #818181;
+    font-weight:normal;
+    font-style: oblique;
+}
+
+
+.fraseDisenoHome {
+    grid-area: contenedorFraseDiseno;
+    font-size: 30px;
+    font-style: bold;
+    text-align: center;
+    color:#707070;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.bannerHome {
+    width: 100%;
+}
+
+/* cards servicios*/
+
+.cardsHome {
+    grid-area: cardsHome;
+    display: flex;
+    justify-content: center;
+    margin:30px;
+}
+
+.cardSecciones {
+    background-color: #f5f5f5;
+    margin: 20px;
+    text-align: center;
+    width: 450px;
+    border-radius: 5px;
+    border: 1px solid #ebebeb;
+
+}
+
+
+.cardSeccionesFoto {
+    width: 100%;
+}
+
+.cardSeccionesTexto {
+    font-size: 16px;
+    padding: 0px 0px 10px 0px;
+    font-weight: bold;
+    color: #707070;
+}
+
+
+
+/* preview sección Sobre Nosotros */
+
+.previewNosotros {
+    grid-area: previewNosotros;
+    background-color: #f5f5f5;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 20% 50%;
+    justify-content: center;
+}
+
+
+.tituloNosotros h2 {
+    color: #00bebb;
+    font-size: 35px;
+}
+
+.textoNosotros p{
+    margin-bottom: 30px;
+}
+
+
+.botonNosotros {
+    border: 1px solid #00bebb;
+    border-radius: 40px;
+    padding: 10px;
+    font-style: italic;
+    font-weight: bold;
+    display: inline-block;
+    color: #00bebb;
+}
+
+/* footer */
+
+footer {
+    grid-area: footer;
+    background-color: #212121;
+    color: #FFFFFF;
+    padding-bottom: 50px;
+    padding-top: 40px;
+    }
+
+
+.contenidoFooter {
+    display: grid;
+    grid-template-columns: 15% 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: center;
+    grid-column-gap: 10%;
+    align-items: center;
+}
+
+.logoRedesFooter {
+    text-align: center;
+}
+
+footer a {
+    color: #FFFFFF;
+}
+
+footer ul {
+    list-style-type: none;
+    font-size: 12px;
+    display:flex;
+    flex-wrap: wrap;  
+    justify-content: space-between;
+
+}
+
+.formFooterInput {
+    width: 100%;
+    margin: 1px;
+    background: none;
+    border: none;
+    border-bottom: solid 1px #ffffff;
+    padding: 5px;
+}
+
+.formFooter legend {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.formFooterSubmit {
+    width: 100%;
+    margin-top: 10px;
+    background-color:#00bebb;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px;
+ }
+
+ .derechosFooter {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 13px;
+    font-style: italic;
+    color: #6e6e6e;
+}
+
+/* responsive home*/
+
+@media only screen and (max-width: 1200px) and (min-width: 600px){
+
+    nav {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    .logoHeader {
+        width: 90%; 
+    }
+
+    nav ul {
+        margin: 5px;
+        text-align: center;
+        padding: 5px;
+        justify-content: space-evenly;
+    }
+
+    .fraseDisenoHome {
+        font-size: 25px;
+        margin: 5%;
+    }
+
+    .cardsHome {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .previewNosotros {
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    .tituloNosotros {
+        margin-bottom: 5%;
+    }
+
+    .contenidoFooter {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .contenedorFormFooter {
+        margin-top: 20px;
+    }
+
+    .formFooter {
+        margin: 20px;
+    }
+}
+
+@media only screen and (max-width: 599px) and (min-width: 320px){
+
+    nav {
+        display: grid;
+        align-items: center;
+        background-color: white;
+        width: 100%;
+    }
+
+
+    .logoHeader {
+        display: none;
+    }
+
+    nav ul {
+        background-color: white;  
+        width: 90%;
+        margin: 5px;
+        text-align: center;
+        padding: 5px;
+        justify-content: space-evenly;
+    }
+
+    .fraseDisenoHome {
+    font-size: 30px;
+    margin: 5%;
+    }
+
+    .cardsHome {
+    display: grid;
+    grid-template-columns: auto;
+    }
+
+    .cardSeccionesTexto {
+        font-size: 25px;
+        padding: 10px;
+    }
+
+    .previewNosotros {
+        grid-template-columns: auto;
+        text-align: center;
+        font-size: 25px;
+        padding: 5%;
+    }
+
+    .previewNosotros h2 {
+        margin-bottom: 5%;
+        font-size: 50px;
+    }
+
+    .contenidoFooter {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .contenedorFormFooter {
+        margin-top: 20px;
+    }
+
+    .formFooter {
+        margin: 20px;
+    }
+}   
+
+
+/* pagina Sobre Nosotros */
+
+.gridNosotros {
+    display: grid;
+    grid-template-areas: "header"
+                         "equipo"
+                         "equipoFotos"
+                         "sumate"
+                         "footer";
+}
+
+.equipo {
+    grid-area: equipo;
+    display: grid;
+    grid-template-columns: 20% 50%;
+    justify-content: center;
+    padding-bottom: 3%;
+}
+
+.equipo h2 {
+    margin: 20px;
+    color: #00bebb;
+    font-weight:normal;
+}
+
+.equipo p {
+    margin: 20px;
+}
+
+
+
+.equipoFotos {
+    grid-area: equipoFotos;
+    padding: 60px 0px 60px 0px;
+    display: flex;
+    justify-content: space-evenly;  
+    background-color: #fafafa;
+}
+
+
+.equipoFotos img {
+    border-radius: 15px;
+}
+
+.equipoNombre {
+    font-size: 15px;
+    font-weight: bold;
+    color: #818181;
+    text-align:center;
+    margin: 5px;
+}
+
+.equipoRol {
+    font-size: 14px;
+    color: #a09f9f;
+    text-align: center;
+    font-style: italic;
+}
+
+.sumate {
+    grid-area: sumate;
+    padding: 60px 0px 60px 0px;
+    background-color: #f5f5f5;
+    display: block;
+    text-align: center;
+}
+
+.sumate h2 {
+    color: #00bebb;
+    font-weight:normal;
+    font-size: 35px;
+    padding: 20px;
+}
+
+/* responsive nosotros */
+
+@media only screen and (max-width: 1200px) and (min-width: 600px){
+
+   
+    .equipo {
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .equipoTitulo {
+        padding: 0px;
+        font-size: 25px;
+    }
+    
+    .equipoFotos {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .equipoMiembro {
+        padding-bottom: 30px;
+     
+    }
+
+    .equipoNombre {
+        font-size: 34px;
+    }
+
+    .equipoRol {
+        font-size: 24px;
+    }
+
+    .sumate h2 {
+        font-size: 35px;
+    }
+
+    .sumate a {
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 599px) and (min-width: 320px){
+
+    .logoHeader {
+        display: none;
+    }
+
+    .equipo {
+        display: grid;
+        grid-template-columns: auto;
+        text-align: center;
+        font-size: 15px;
+        padding: 20px;
+    }
+
+
+
+    .equipoTitulo {
+        padding: 0px;
+        font-size: 20px;
+    }
+    
+    .equipoFotos {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .equipoMiembro {
+        padding-bottom: 30px;
+    }
+
+    .equipoNombre {
+        font-size: 20px;
+    }
+
+    .equipoRol {
+        font-size: 20px;
+    }
+
+    .sumate h2 {
+        font-size: 35px;
+    }
+
+    .sumate a {
+        font-size: 20px;
+    }
+
+}
+
+
+
+/* pagina Nuestros Servicios */
+
+.gridServicios {
+    display: grid;
+    grid-template-areas: "header"
+                         "tituloServicios"
+                         "servicios"
+                         "charlemos"
+                         "footer";
+}
+
+.tituloServicios {
+    grid-area: tituloServicios;
+    text-align: center;
+    font-weight: normal;
+    font-size: 30px;
+    color: #707070;
+}
+
+.servicios {
+    grid-area: servicios;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #ffffff;
+    padding: 100px;
+    }
+
+.cardServicios {
+    width: 300px;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #f5f5f5;
+    border-radius: 15px;
+    margin: 30px;
+}
+
+
+.cardServicios img {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.cardServicios iframe {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.servicioLabel {
+    font-weight: bold;
+    color: #00bebb;
+    margin-top: 10px;
+}
+
+.servicioDescrip {
+    font-size: 13px;
+    margin: 15px;
+    color: #6e6e6e;
+}
+
+.charlemos {
+    grid-area: charlemos;
+    padding: 30px;
+    background-color: #f5f5f5;
+}
+
+.charlemos h2 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 30px;
+    color: #00bebb;
+}
+
+.charlemosForm {
+    padding: 30px;
+    text-align: center;
+}
+
+.charlemosImput {
+    width: 60%;
+    margin: 2px;
+    padding: 5px;
+    border:none;
+    border-bottom: 1px solid #00bebb;
+}
+
+.charlemosConsulta {
+    width: 60%;
+    height: 100px;
+    margin: 5px;
+    border:none;
+    border-bottom:1px solid #00bebb;
+    padding: 5px;
+}
+
+.charlemosSubmit {
+    width: 60%;
+    background-color: #00bebb;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border:none;
+    border-radius: 2px;
+    padding: 5px;
+    margin: 2px;
+}
+
+
+
+
+/* pagina Proyectos Realizados */
+
+.gridProyectos {
+    display: grid;
+    grid-template-areas: "header"
+                         "galeriaProyectos"
+                         "charlemos"
+                         "footer";
+}
+
+.galeriaProyectos {
+    grid-area: galeriaProyectos;
+    display:grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    margin: 20px;
+
+}
+
+.galeriaProyectos img {
+    width: 100%;
+    height: 100%;
+}
+
+.galeriaProyectos iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* pagina Contacto */
+
+.gridContacto {
+    display: grid;
+    grid-template-areas: "header"
+                         "contacto"
+                         "contactoCTA"
+                         "footer";    
+}
+
+.contacto {
+    grid-area: contacto;
+    display:grid;
+    grid-template-columns: auto auto;
+}
+
+.contactoMapa {
+    margin: 40px;
+    display:grid;
+    justify-content: right;
+}
+
+.contactoDatos {
+    margin: 40px;
+    display:grid;
+    justify-content: left;
+}
+
+.contactoDatos h2 {
+    font-weight: normal;
+    font-size: 30px;
+    color: #6e6e6e;
+}
+
+.contactoRedes {
+    margin-top: 50px;
+}
+
+.contactoDatos p {
+    color: #818181;
+}
+
+.contactoDatos a {
+    color: #818181;  
+}
+
+
+.contactoCTA {
+    grid-area: contactoCTA;
+    background-color: #f5f5f5;
+    padding: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    color: #00bebb;
+}
+
+/* responsive Contacto */
+
+@media only screen and (max-width: 1200px) and (min-width: 320px){
+
+    .contacto {
+        grid-template-columns: auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contactoMapa {
+        margin: 10px;
+    }
+}
+
